@@ -1,25 +1,27 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func add5Value(count int) {
-count += 5
-fmt.Println("add5Value :", count)
+	count += 5
+	fmt.Println("add5Value :", count)
 }
 
 func add5Point(count *int) {
-*count += 5
-fmt.Println("add5Point :",*count)
+	*count += 5
+	fmt.Println("add5Point :", *count)
 }
 
 func main() {
-var count int
+	var count int
 
-add5Value(count)
+	add5Value(count)
 
-fmt.Println("add5Value post:", count)
+	fmt.Println("add5Value post:", count)
 
-add5Point(&count)
+	add5Point(&count)
 
-fmt.Println("add5Point post:", count)
+	fmt.Println("add5Point post:", count)
 }
